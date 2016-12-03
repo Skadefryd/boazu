@@ -1,0 +1,23 @@
+@import '../../config/default'
+
+.box
+  display: block
+  margin: 8px  
+  &__header,    
+  &__body,
+  &__footer
+    overflow: hidden
+    *overflow: visible
+    zoom: 1
+  &--green
+    background-color: mint
+    border:2px solid pea
+  &--clickable:focus,
+  &--clickable:hover
+    outline:2px solid secondary-blue
+ 
+@media not all and (min-width:768px) {
+    .box, { margin: 16px }   
+}
+
+ 

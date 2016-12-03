@@ -1,0 +1,36 @@
+@import '../../config/default'
+
+/*
+
+
+
+    Usage: [prefix]{color-name}
+
+    {prefix}
+    none      color
+    bg-       background-color  
+    border-   border-color
+    focus-    an elements outline-color on focus state 
+    
+    {color-name}
+    any color from the palette
+
+    
+
+*/
+
+for c in colorpalette
+  .{c}
+    color: lookup(c)
+
+for c in colorpalette
+  .bg-{c}
+    background-color: lookup(c)
+
+for c in colorpalette
+  .border-{c}
+    border-color: lookup(c)
+
+for c in colorpalette
+  .focus-{c}
+    outline-color: lookup(c)
