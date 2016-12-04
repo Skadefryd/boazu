@@ -1,0 +1,18 @@
+{
+  "users": [{
+    "name": "Mona Jugebakken",
+    "description": "Har vert kjempekjempelenge på finn og er en dame du helt klart kan stole på",
+    "image-src": "",
+    "rating": "2"      
+  }, {
+    "name": "Pelle Parafin",
+    "description": "Leverer musikk i ny bøljestil!",
+    "image-src": "",
+    "rating": "5"      
+  }, {
+    "name": "Tom Ikkeno",
+    "description": "",
+    "image-src": "",
+    "rating": ""      
+  }]
+}

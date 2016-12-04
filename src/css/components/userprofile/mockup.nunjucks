@@ -1,0 +1,15 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+{% for user in users %}
+<div class="box">
+  <div class="bd">
+    <img src="{{user.imagesrc}}" alt="bilde av {{user.name}}">
+    <p class="t3">{{user.name}}</p>
+    <p>{{user.description}}</p>
+    <p>{{user.rating}}</p>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
