@@ -1,5 +1,31 @@
 @import '../../config/default'
 
+/*
+
+  
+    Standardized themeable grouping element 
+
+    Markup example:
+    
+    <div class="box">
+      <div class="box__header"> Title </div>
+      <div class="box__body"> content </div>
+      <div class="box__footer"> </div>
+    </div>
+
+
+
+*/
+
+// themeable vars - defaults 
+hover-outlinecolor = secondary-blue
+hover-outline = 2px solid box-hover-outlinecolor
+small-screen-margin = 8px
+big-screen-margin = 16px
+
+// Override with theme 
+// @require 'themes.styl'
+
 .box
   display: block
   margin: 8px  
@@ -9,13 +35,13 @@
     overflow: hidden
     *overflow: visible
     zoom: 1
+  &--clickable:focus,
+  &--clickable:hover
+    outline:2px solid hover-outlinecolor
   &--green
     background-color: mint
     border:2px solid pea
-  &--clickable:focus,
-  &--clickable:hover
-    outline:2px solid secondary-blue
  
-@media not all and (min-width:768px) {
-    .box, { margin: 16px }   
-}
+@media not all and (min-width:768px)
+  .box 
+    margin: 16px

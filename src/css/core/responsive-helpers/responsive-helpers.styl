@@ -1,0 +1,96 @@
+@require "../../mixins/breakpoints.styl";
+/*
+
+
+        Responsive helper classes
+
+
+*/
+.leftify-lt768 
+    text-align: left !important
+        
+.rightify-lt768 
+    text-align: right !important
+    
+.centerify-lt768 
+    text-align: center !important
+    
+.fleft-lt768 
+    float: left !important
+    
+.fright-lt768 
+    float: right !important
+    
+.hide-lt768,
+.show-gt768 
+    display: none !important
+
++bp(min768)
+    .leftify-ht768 
+        text-align: left !important
+        
+    .rightify-ht768
+        text-align: right !important
+        
+    .centerify-ht768 
+        text-align: center !important
+        
+    .fleft-ht768 
+        float: left !important
+        
+    .fright-ht768 
+        float: right !important
+        
+    .hide-ht768,
+    .hide-gt768,
+    .show-lt768 
+        display: none !important
+
++bp(max479)
+    .show-gt480,
+    .hide-lt480
+        display: none !important
+
++bp(max599)
+    .show-gt-600,
+    .hidelt600,
+    .hide-lt600
+        display: none !important
+
++bp(max899)
+    .show-gt-900,
+    .hidelt900,
+    .hide-lt900
+        display: none !important
+
++bp(max1234)
+    .show-gt-1235,
+    .hidelt1235,
+    .hide-lt1235
+        display: none !important
+
++bp(min480)
+    .show-lt-480,
+    .hidegt480,
+    .hide-gt480,
+    .hide-ht480
+        display: none !important
+
++bp(min600)
+    .show-lt-600,
+    .hidegt600,
+    .hide-gt600,
+    .hide-ht600 
+        display: none !important
+
++bp(min900)
+    .hidegt900,
+    .hide-gt900,
+    .hide-ht900
+        display: none !important
+
++bp(min1235)
+    .hidegt1235,
+    .hide-gt1235,
+    .hide-ht1235 
+        display: none !important

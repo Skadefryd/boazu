@@ -1,0 +1,146 @@
+@require "../../mixins/breakpoints.styl";
+
+s-1of1 = 100%
+s-1of2 = 50%
+s-1of3 = 33.3333333%
+s-2of3 = 66.6666666%
+s-1of4 = 25%
+s-3of4 = 75%
+s-1of5 = 20%
+s-2of5 = 40%
+s-3of5 = 60%
+s-4of5 = 80%
+s-1of6 = 16.6666666%
+s-5of6 = 83.3333333%
+s-1of7 = 14.2857142%
+
+.flex
+    display: flex
+    min-width: 0  
+
+.inline-flex
+    display: inline-flex
+    
+.flex
+    &--wrap 
+        flex-wrap: wrap
+        
+    &--nowrap 
+        flex-wrap: nowrap
+        
+    &--wrap-reverse 
+        flex-wrap: wrap-reverse
+        
+    &--row
+        flex-direction: row
+        
+    &--row-reverse
+        flex-direction: row-reverse
+        
+    &--column
+        flex-direction: column
+        
+    &--column-reverse
+        flex-direction: column-reverse
+        
+    &--justify-start
+        justify-content: flex-start
+        
+    &--justify-end
+        justify-content: flex-end
+
+    &--Justify-center
+        justify-content: center
+        
+    &--justify-space-between
+        justify-content: space-between
+        
+    &--justify-space-around
+        justify-content: space-around
+        
+    &--align-items-start
+        align-items: flex-start
+        
+    &--align-items-end
+        align-items: flex-end
+        
+    &--align-items-center
+        align-items: center
+
+    &--align-items-baseline
+        align-items: baseline
+        
+    &--align-items-stretch
+        align-items: stretch
+        
+    &--align-content-start 
+        align-content: flex-start
+        
+    &--align-content-end
+        align-content: flex-end
+        
+    &--align-content-center
+        align-content: center
+        
+    &--align-content-space-between
+        align-content: space-between
+
+    &--align-content-space-around
+        align-content: space-around
+
+    &--align-content-stretch
+        align-content: stretch
+
+.flex > .align-self-start
+    align-self: flex-start
+    
+.flex > .align-self-end
+    align-self: flex-end
+    
+.flex > .align-self-center
+    align-self: center
+    
+.flex > .align-self-baseline
+    align-self: baseline
+    
+.flex > .align-self-stretch
+    align-self: stretch
+
+.flex-grow1 
+    flex-grow: 1
+    
+.flex-grow2 
+    flex-grow: 2
+    
+.flex-grow3
+    flex-grow: 3
+    
+.flex-grow4
+    flex-grow: 4
+    
+.flex-grow5
+    flex-grow: 5
+    
+.flex-grow6
+    flex-grow: 6
+    
+.flex-grow7
+    flex-grow: 7
+    
+.flex-grow8
+    flex-grow: 8
+    
+.flex-grow9
+    flex-grow: 9
+    
+.flex-grow10
+    flex-grow: 10
+    
+.flex-no-shrink
+    flex-shrink: 0
+    
+// mod with flex behaviour
+.flex.mod,
+.flex.mod > .inner { width: 100%; }
+a.mod.flex 
+    display: flex !important

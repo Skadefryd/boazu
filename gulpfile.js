@@ -8,7 +8,7 @@ var rename = require('gulp-rename');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var nunjucksRender = require('gulp-nunjucks-render');
-var data = require('gulp-data');
+//var data = require('gulp-data');
 
 var dist_dir = './dist/' 
 
