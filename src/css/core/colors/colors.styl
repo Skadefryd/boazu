@@ -6,7 +6,7 @@
 
     Usage: [prefix]{color-name}
 
-    {prefix}
+    [prefix]
     none      color
     bg-       background-color  
     border-   border-color
@@ -19,18 +19,18 @@
 
 */
 
-for c in colorpalette
+for c in $colorpalette
   .{c}
-    color: lookup(c)
+    color: lookup("$"+c)
 
-for c in colorpalette
+for c in $colorpalette
   .bg-{c}
-    background-color: lookup(c)
+    background-color: lookup("$"+c)
 
-for c in colorpalette
+for c in $colorpalette
   .border-{c}
-    border-color: lookup(c)
+    border-color: lookup("$"+c)
 
-for c in colorpalette
+for c in $colorpalette
   .focus-{c}
-    outline-color: lookup(c)
+    outline-color: lookup("$"+c)

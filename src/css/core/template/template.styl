@@ -1,19 +1,34 @@
+$page-gutter-small-screen = 0
+$page-gutter-large-screen = 15px
+$content-max-width = 995px
+  
+body
+  overflow-y: scroll
+  
 body, html 
-  background-color: ice
+  background-color: $milk
+  
+// turn off focus for touch devices (Relies on a script that sets .probably-touch class on body)  
+.probably-touch:focus, .probably-touch :focus { outline: none; }
+
 
 .page
   width: auto
   _text-align: left
-  margin-left: 2px
-  margin-right: 2px
+  margin-left: $page-gutter-small-screen
+  margin-right: $page-gutter-small-screen
 
-@media not all and (max-width: 767px)
++bp(min768)
   .page
-    max-width: 995px
-    margin-left: 31px
-    margin-right: 31px
+    max-width: $content-max-width
+    margin-left: $page-gutter-large-screen
+    margin-right: $page-gutter-large-screen
 
   /* These are dictated by the banner formats, might aswell be considered as constants */
   .container 
     max-width: 1010px
+    margin: 0
+
++bp(min1300)
+  .container
     margin: 0 auto

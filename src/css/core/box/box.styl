@@ -1,4 +1,5 @@
 @import '../../config/default'
+@import '../../mixins/*'
 
 /*
 
@@ -17,31 +18,29 @@
 
 */
 
-// themeable vars - defaults 
-hover-outlinecolor = secondary-blue
-hover-outline = 2px solid box-hover-outlinecolor
-small-screen-margin = 8px
-big-screen-margin = 16px
+// themeable vars - defaults (scoping?) 
+$hover-outline = 2px solid $secondary-blue
+$small-screen-margin = 8px
+$big-screen-margin = 16px
 
 // Override with theme 
 // @require 'themes.styl'
 
 .box
   display: block
-  margin: 8px  
+  margin: $small-screen-margin  
   &__header,    
   &__body,
   &__footer
     overflow: hidden
-    *overflow: visible
-    zoom: 1
   &--clickable:focus,
   &--clickable:hover
-    outline:2px solid hover-outlinecolor
+    outline:$hover-outline
+
   &--green
     background-color: mint
     border:2px solid pea
  
-@media not all and (min-width:768px)
-  .box 
-    margin: 16px
++bp(min768)
+  .box
+    margin: $big-screen-margin

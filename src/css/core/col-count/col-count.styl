@@ -1,39 +1,41 @@
-@require "../../mixins/breakpoints.styl"
+@require '../../mixins/*'
 
-/*
-
-
-		css-column based grid-system
-
-
-*/
-/*
-.col-count1from990, .col-count2from990, .col-count3from990,
-.col-count1upto990, .col-count2upto990, .col-count3upto990,
-.col-count1upto768, .col-count2upto768, .col-count3upto768,
-.col-count1upto640, .col-count2upto640, .col-count3upto640,
-.col-count1upto480, .col-count2upto480, .col-count3upto480
-	break-inside: avoid
+.col-count1from990, 
+.col-count2from990, 
+.col-count3from990,
+.col-count1upto990, 
+.col-count2upto990, 
+.col-count3upto990,
+.col-count1upto768, 
+.col-count2upto768, 
+.col-count3upto768,
+.col-count1upto640, 
+.col-count2upto640, 
+.col-count3upto640,
+.col-count1upto480, 
+.col-count2upto480, 
+.col-count3upto480
+    break-inside: avoid
     column-gap: 40px
 
 .col-gap-small
-	column-gap: 10px
-
+    column-gap: 8px
+    
 .col-gap-medium
-	column-gap: 20px
+    column-gap: 16px
 
 .col-gap-large
-	column-gap: 40px
-	
+    column-gap: 32px
+
 .col-count1
-	column-count: 1
+    column-count: 1
 
 .col-count2
-	column-count: 2
+    column-count: 2
 
 .col-count3
-	column-count: 3
-*/	
+    column-count: 3
+
 +bp(min990)
     .col-count1from990
     	column-count: 1
@@ -45,7 +47,7 @@
         column-count: 3
         
 
-+bp(max989)
++bp(max990)
     .col-count1upto990
         column-count: 1
         
@@ -56,7 +58,7 @@
         column-count: 3
         
 
-+bp(max767)
++bp(max768)
     .col-count1upto768
         column-count: 1
         
@@ -67,7 +69,7 @@
         column-count: 3
         
 
-+bp(max639)
++bp(max640)
     .col-count1upto640
         column-count: 1
         
@@ -78,7 +80,7 @@
         column-count: 3
         
 
-+bp(max479)
++bp(max480)
     .col-count1upto480
         column-count: 1
         

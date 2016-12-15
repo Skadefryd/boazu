@@ -2,18 +2,16 @@
 /* 
 
 
-		Usage: bp({breakpoint1} [breakpoint(n)] )
+		Usage: bp( {breakpoint1} [breakpoint(n)] )
+		
+		{breakpoints}
+		480, 640, 768, 900, 990, 1235, 1300
 				
 		.sidebar
 			color: red
-			+bp(bp-small-only)
+			+bp(max480)
 				color: green
 
-		.sidebar
-			color: red
-			+bp(bp-small bp-medium)
-				color: green
-				
 		.sidebar
 			color: red
 			+bp(min460 max767)
@@ -21,39 +19,31 @@
 
 */
 
-// TODO: Consolidate list of breakpoints, we dont this many
+// TUDO: Should this thing accept custom values?
 
-media_queries = {
-	bp-tiny-only  	: "(max-width: 459px)",
-	bp-small 		: "(min-width: 460px)",
-	bp-small-only  	: "(min-width: 460px) and (max-width: 767px)",
-	bp-medium 		: "(min-width: 768px)",
-	bp-medium-only 	: "(min-width: 768px) and (max-width: 989px)",
-	bp-large 		: "(min-width: 990px)",
-	bp-portrait 	: "(orientation portrait)",
-	bp-landscape 	: "(orientation landscape)",
-	
-	max459			: "(max-width: 459px)",
-	min460 			: "(min-width: 460px)",
-	max479			: "(max-width: 479px)",
+$media_queries = {
+	max480			: "(max-width: 479px)",
 	min480 			: "(min-width: 480px)",
-	max599 			: "(max-width: 599px)",
-	min600 			: "(min-width: 600px)",
-	max639 			: "(max-width: 639px)",
+	max640 			: "(max-width: 639px)",
 	min640 			: "(min-width: 640px)",
-	max767 			: "(max-width: 767px)",
+	max768 			: "(max-width: 767px)",
 	min768 			: "(min-width: 768px)",
-	max899 			: "(max-width: 899px)",
+	max900 			: "(max-width: 899px)",
 	min900 			: "(min-width: 900px)",
-	max989 			: "(max-width: 989px)",
+	max990 			: "(max-width: 989px)",
 	min990 			: "(min-width: 990px)",
-	max1234 		: "(max-width: 1234px)",
-	min1235 		: "(min-width: 1235px)"
+	max1235 		: "(max-width: 1234px)",
+	min1235 		: "(min-width: 1235px)",
+	max1300 		: "(max-width: 1234px)",
+	min1300 		: "(min-width: 1235px)",
+	portrait 		: "(orientation portrait)",
+	landscape 		: "(orientation landscape)"
 }
 
 bp(breakpoints)
 	conditions = ()
 	for breakpoint in breakpoints
-		push(conditions, media_queries[breakpoint])
+		push(conditions, $media_queries[breakpoint])
 	conditions = join("and ", conditions)
-	@media conditions {block}
+	@media conditions 
+		{block}
