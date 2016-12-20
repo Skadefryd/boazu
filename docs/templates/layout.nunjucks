@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="../../css/normalize.css">
   	<link rel="stylesheet" href="../../css/core.css">
 </head>
-<body>
+<body class="debug">
 
   <div class="container">
     <div class="page">

@@ -1,0 +1,47 @@
+@import '../../config/default'
+@import '../../mixins/*'
+
+/*
+
+  
+    Standardized themeable grouping element 
+
+    Markup example:
+    
+    <div class="mod">
+      <div class="mod__hd"> Title </div>
+      <div class="mod__bd"> content </div>
+      <div class="mod__ft"> </div>
+    </div>
+
+
+
+*/
+
+// themeable vars - defaults (scoping?) 
+$hover-outline = 2px solid $secondary-blue
+$small-screen-padding = 8px
+$big-screen-padding = 16px
+
+// Override with theme 
+// @require 'themes.styl'
+
+.mod
+  display: block
+  padding: $small-screen-padding  
+  &__hd,    
+  &__bd,
+  &__ft
+    overflow: hidden
+  &--is-clickable:focus,
+  &--is-clickable:hover
+    outline:$hover-outline
+  &--green
+    background-color: $mint
+    border:2px solid $pea
+  &--banana
+    background-color: $banana
+
++bp(min768)
+  .box
+    margin: $big-screen-padding
