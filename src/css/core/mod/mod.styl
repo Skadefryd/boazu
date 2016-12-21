@@ -3,11 +3,11 @@
 
 /*
 
-  
-    Standardized themeable grouping element 
+
+    Standardized themeable grouping element
 
     Markup example:
-    
+
     <div class="mod">
       <div class="mod__hd"> Title </div>
       <div class="mod__bd"> content </div>
@@ -18,30 +18,63 @@
 
 */
 
-// themeable vars - defaults (scoping?) 
+// themeable vars - defaults (scoping?)
 $hover-outline = 2px solid $secondary-blue
 $small-screen-padding = 8px
-$big-screen-padding = 16px
+$large-screen-padding = 16px
 
-// Override with theme 
+// Override with theme
 // @require 'themes.styl'
 
 .mod
   display: block
-  padding: $small-screen-padding  
-  &__hd,    
+  padding: $small-screen-padding
+  &__hd,
   &__bd,
   &__ft
     overflow: hidden
   &--is-clickable:focus,
   &--is-clickable:hover
     outline:$hover-outline
+    outline-offset: -2px;
   &--green
-    background-color: $mint
-    border:2px solid $pea
+    &:focus,
+    &:hover
+      outline-color: $mint
+    & .mod__bd
+      background-color: $mint
   &--banana
-    background-color: $banana
+    &:focus,
+    &:hover
+      outline-color: $banana
+    & .mod__bd
+      background-color: $banana
+  &--green .mod__bd,
+  &--banana .mod__bd
+    +bp(min480)
+      padding: $small-screen-padding
+    +bp(min768)
+      padding: $large-screen-padding
+
+
+//
+
+.mod h1, .mod h2, .mod h3, .mod h4, .mod h5, .mod h6,
+.mod ul, .mod ol,
+.mod p,
+.mod blockquote,
+.mod .media
+    margin:0;
+
 
 +bp(min768)
-  .box
-    margin: $big-screen-padding
+  .mod
+    padding: $large-screen-padding
+    /*
+  .mod h1, .mod h2, .mod h3, .mod h4, .mod h5, .mod h6,
+  .mod ul, .mod ol,
+  .mod p,
+  .mod blockquote,
+  .mod .media
+    margin: 0px;
+*/
