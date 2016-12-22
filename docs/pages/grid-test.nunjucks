@@ -2,6 +2,11 @@
 
 {% block content %}
 <h1>Something's strange in the neighbourhood</h1>
+<div class="mod">
+	<div class="mod__bd">
+		<p>Methodologies bricks-and-clicks; ecologies disintermediate engineer visualize back-end; rich-clientAPIs e-services platforms visionary value. IntegrateAJAX-enabled synthesize engage efficient granular, "initiatives transparent out-of-the-box." Tag reintermediate bandwidth bricks-and-clicks seamless frictionless infrastructures extensible, world-class user-contributed. Next-generation repurpose revolutionize enterprise synthesize whiteboard eyeballs. User-centric, recontextualize--syndicate revolutionize schemas reinvent, disintermediate life-hacks architect granular customized, markets. </p>
+	</div>
+</div>
 <div class="grid r-cols1to3">
 	<div class="unit">
 		<div class="mod">

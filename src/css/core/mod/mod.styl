@@ -14,7 +14,7 @@
       <div class="mod__ft"> </div>
     </div>
 
-
+    .mod.mod--banana.mod--is-clickable
 
 */
 
@@ -25,25 +25,29 @@ $large-screen-padding = 16px
 
 // Override with theme
 // @require 'themes.styl'
-
+/*
 .mod
   display: block
-  padding: $small-screen-padding
   &__hd,
   &__bd,
   &__ft
     overflow: hidden
+    padding: $small-screen-padding
   &--is-clickable:focus,
   &--is-clickable:hover
     outline:$hover-outline
     outline-offset: -2px;
+
+  // skins
   &--green
+    padding:0
     &:focus,
     &:hover
       outline-color: $mint
     & .mod__bd
       background-color: $mint
   &--banana
+    padding:0
     &:focus,
     &:hover
       outline-color: $banana
@@ -56,9 +60,33 @@ $large-screen-padding = 16px
     +bp(min768)
       padding: $large-screen-padding
 
+*/
 
-//
 
+.mod
+  display: block
+  margin: 0
+  padding: $small-screen-padding
+  &--is-clickable:focus,
+  &--is-clickable:hover
+    outline:$hover-outline
+    outline-offset: -2px;
+
+  // skins
+  &--green
+    background-color: $mint
+    &:focus,
+    &:hover
+      outline-color: $mint
+
+  &--banana
+    background-color: $banana
+    &:focus,
+    &:hover
+      outline-color: $banana
+
+
+// Overides
 .mod h1, .mod h2, .mod h3, .mod h4, .mod h5, .mod h6,
 .mod ul, .mod ol,
 .mod p,
@@ -66,9 +94,9 @@ $large-screen-padding = 16px
 .mod .media
     margin:0;
 
-
 +bp(min768)
   .mod
+    margin: 16px
     padding: $large-screen-padding
     /*
   .mod h1, .mod h2, .mod h3, .mod h4, .mod h5, .mod h6,

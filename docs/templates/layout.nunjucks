@@ -5,15 +5,80 @@
 	<title>Test template</title>
 	<link rel="stylesheet" href="../../css/normalize.css">
   	<link rel="stylesheet" href="../../css/core.css">
+<style>
+
+.shitty-banners {
+    position: relative;
+    width: 1010px;
+    margin: 0;
+    padding-top: 10px;
+}
+.shitty-banners .top {
+    height: 150px;
+    background: #000 url("tvangstroye/top.jpg");
+    color: yellow;
+    font-size: 40px;
+}
+.shitty-banners .left {
+    width: 180px;
+    position: absolute;
+    left: -180px;
+    top: 10px;
+}
+.shitty-banners .right {
+    width: 180px;
+    position: absolute;
+    right: -180px;
+    top: 10px;
+}
+.shitty-banners .stickycrap {
+    position: fixed;
+    background: #000 url("tvangstroye/left.jpg");
+    width: 180px;
+    height: 700px;
+    color: yellow;
+    font-size: 40px;
+}
+.shitty-banners .right .stickycrap {
+    background: #000 url("tvangstroye/right.jpg");
+}
+@media screen and (max-width: 1010px) {
+    .shitty-banners { display: none!important; }
+}
+@media (min-width: 1300px){
+	.shitty-banners {
+    	margin: 0 auto;
+	}
+}
+</style>
 </head>
 <body class="debug">
+
+<!-- Banner garbage -->
+<div class="shitty-banners centerify">
+  <div class="top">
+
+  </div>
+  <div class="left">
+    <div class="stickycrap">
+
+    </div>
+  </div>
+  <div class="right">
+    <div class="stickycrap">
+
+    </div>
+  </div>
+</div>
+<!-- -->
+
 
   <div class="container">
     <div class="page">
       {% block content %} {% endblock %}
     </div>
   </div>
-  
+
   <script src="../../js/boazu.js"></script>
 </body>
 </html>

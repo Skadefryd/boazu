@@ -1,12 +1,12 @@
 
-/* 
+/*
 
 
 		Usage: bp( {breakpoint1} [breakpoint(n)] )
-		
+
 		{breakpoints}
 		480, 640, 768, 900, 990, 1235, 1300
-				
+
 		.sidebar
 			color: red
 			+bp(max480)
@@ -34,8 +34,8 @@ $media_queries = {
 	min990 			: "(min-width: 990px)",
 	max1235 		: "(max-width: 1234px)",
 	min1235 		: "(min-width: 1235px)",
-	max1300 		: "(max-width: 1234px)",
-	min1300 		: "(min-width: 1235px)",
+	max1300 		: "(max-width: 1299px)",
+	min1300 		: "(min-width: 1300px)",
 	portrait 		: "(orientation portrait)",
 	landscape 		: "(orientation landscape)"
 }
@@ -45,5 +45,5 @@ bp(breakpoints)
 	for breakpoint in breakpoints
 		push(conditions, $media_queries[breakpoint])
 	conditions = join("and ", conditions)
-	@media conditions 
+	@media conditions
 		{block}
