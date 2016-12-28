@@ -8,13 +8,9 @@
 
     Markup example:
 
-    <div class="mod">
-      <div class="mod__hd"> Title </div>
-      <div class="mod__bd"> content </div>
-      <div class="mod__ft"> </div>
-    </div>
+    <div class="mod"></div>
 
-    .mod.mod--banana.mod--is-clickable
+    .mod.mod--skin.mod--banana.mod--is-clickable
 
 */
 
@@ -25,6 +21,7 @@ $large-screen-padding = 16px
 
 // Override with theme
 // @require 'themes.styl'
+
 /*
 .mod
   display: block
@@ -65,27 +62,37 @@ $large-screen-padding = 16px
 
 .mod
   display: block
-  margin: 0
+  margin: 0 0 16px 0
   padding: $small-screen-padding
+  word-break: break-word
   &--is-clickable:focus,
   &--is-clickable:hover
     outline:$hover-outline
     outline-offset: -2px;
-
+  &--skin
+    padding: $small-screen-padding
+    
   // skins
   &--green
     background-color: $mint
     &:focus,
     &:hover
       outline-color: $mint
-
   &--banana
     background-color: $banana
     &:focus,
     &:hover
       outline-color: $banana
 
++bp(min480)
+  .mod
+    margin: 0
+    padding: 16px
+    &--skin
+      margin: 16px
+      padding: $large-screen-padding
 
+    
 // Overides
 .mod h1, .mod h2, .mod h3, .mod h4, .mod h5, .mod h6,
 .mod ul, .mod ol,
@@ -93,16 +100,3 @@ $large-screen-padding = 16px
 .mod blockquote,
 .mod .media
     margin:0;
-
-+bp(min768)
-  .mod
-    margin: 16px
-    padding: $large-screen-padding
-    /*
-  .mod h1, .mod h2, .mod h3, .mod h4, .mod h5, .mod h6,
-  .mod ul, .mod ol,
-  .mod p,
-  .mod blockquote,
-  .mod .media
-    margin: 0px;
-*/

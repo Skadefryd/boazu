@@ -1,1 +1,41 @@
-media.styl
+.media
+  display: table
+  width: 100%
+  
+  &__img,
+  &__body
+    display: table-cell
+    vertical-align: middle
+
+  &__img
+    width: 1px
+    paddin-right:16px
+    > img
+      max-width: none
+  
+  &__body
+    width: auto
+    & > :last-child
+      margin-bottom: 0
+
+  &--reverse
+    direction: rtl
+    > .media__img,
+    > .media__body
+      direction: ltr
+
+    > .media__img
+      padding-right: 0
+      padding-left: 16px
+
+.media--top
+  > .media__img,
+  > .media__body
+    vertical-align: top
+
+
+.media--bottom
+  > .media__img,
+  > .media__body
+    vertical-align: bottom  
+
