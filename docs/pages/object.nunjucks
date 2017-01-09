@@ -50,8 +50,10 @@
 				</div>
 			</div>
 		</div>
-		<button class="primary">Send melding</button>
-		<button class="primary">Betal trygt</button>
+		<p>
+			<button class="primary">Send melding</button>
+			<button class="primary">Betal trygt</button>
+		</p>
 	</div>
 	<div class="grid__unit r-size1of6"></div>
 </div>

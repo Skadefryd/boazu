@@ -23,9 +23,12 @@
 .fright-lt768
     float: right !important
 
-.hide-lt768,
-.show-gt768
-    display: none !important
+
++bp(max768)
+    .show-gt768,
+    .hide-lt768
+        display: none !important
+
 
 +bp(min768)
     .leftify-gt768
@@ -47,8 +50,6 @@
     .show-lt768
         display: none !important
 
-    .show-gt768
-        display: initial
 
 +bp(max480)
     .show-gt480,
