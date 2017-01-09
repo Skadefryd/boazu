@@ -1,26 +1,52 @@
 @require '../../mixins/*'
 
-.col-count1from990, 
-.col-count2from990, 
+/*
+
+
+
+    Usage:
+
+    .col-count{n}from{breakpoint}
+
+    AND
+
+
+
+    {n} number of columns
+    1, 2, 3
+
+
+    {breakpoints}
+    480, 640, 768, 990
+
+
+
+
+*/
+
+// Should this be generated out of the defined breakpoints?
+
+.col-count1from990,
+.col-count2from990,
 .col-count3from990,
-.col-count1upto990, 
-.col-count2upto990, 
+.col-count1upto990,
+.col-count2upto990,
 .col-count3upto990,
-.col-count1upto768, 
-.col-count2upto768, 
+.col-count1upto768,
+.col-count2upto768,
 .col-count3upto768,
-.col-count1upto640, 
-.col-count2upto640, 
+.col-count1upto640,
+.col-count2upto640,
 .col-count3upto640,
-.col-count1upto480, 
-.col-count2upto480, 
+.col-count1upto480,
+.col-count2upto480,
 .col-count3upto480
     break-inside: avoid
     column-gap: 40px
 
 .col-gap-small
     column-gap: 8px
-    
+
 .col-gap-medium
     column-gap: 16px
 
@@ -39,53 +65,53 @@
 +bp(min990)
     .col-count1from990
     	column-count: 1
-        
+
     .col-count2from990
         column-count: 2
-        
+
     .col-count3from990
         column-count: 3
-        
+
 
 +bp(max990)
     .col-count1upto990
         column-count: 1
-        
+
     .col-count2upto990
         column-count: 2
-        
+
     .col-count3upto990
         column-count: 3
-        
+
 
 +bp(max768)
     .col-count1upto768
         column-count: 1
-        
+
     .col-count2upto768
         column-count: 2
-        
+
     .col-count3upto768
         column-count: 3
-        
+
 
 +bp(max640)
     .col-count1upto640
         column-count: 1
-        
+
     .col-count2upto640
         column-count: 2
-        
+
     .col-count3upto640
         column-count: 3
-        
+
 
 +bp(max480)
     .col-count1upto480
         column-count: 1
-        
+
     .col-count2upto480
         column-count: 2
-        
+
     .col-count3upto480
         column-count: 3

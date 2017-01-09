@@ -1,0 +1,159 @@
+@require '../../config/default'
+@require "../../mixins/breakpoints.styl";
+
+/*
+
+
+		# Colsnfrom
+
+		Highly customizable grid-sizing system
+
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+		.cols{n}upto{breakpoint}, and .cols{n}from990
+		these 2 work and should in most cases be used together.
+
+		- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+		cols{n}upto{breakpoint}
+		cols{n}from990
+
+		{n}
+		1, 2, 3, 4, 5, 6, 7, 8
+
+		{breakpoint}
+		480, 640, 768, 990
+
+
+*/
+
+
+
++bp(max480)
+    .cols1upto480 > .grid__unit
+        width: $1of1
+
+    .cols2upto480 > .grid__unit
+        width: $1of2
+
+    .cols3upto480 > .grid__unit
+        width: $1of3
+
+    .cols4upto480 > .grid__unit
+        width: $1of4
+
+    .cols5upto480 > .grid__unit
+        width: $1of5
+
+    .cols6upto480 > .grid__unit
+        width: $1of6
+
+    .cols7upto480 > .grid__unit
+        width: $1of7
+
+    .cols8upto480 > .grid__unit
+        width: $1of8
+
+
++bp(max640)
+    .cols1upto640 > .grid__unit
+        width: $1of1
+
+    .cols2upto640 > .grid__unit
+        width: $1of2
+
+    .cols3upto640 > .grid__unit
+        width: $1of3
+
+    .cols4upto640 > .grid__unit
+        width: $1of4
+
+    .cols5upto640 > .grid__unit
+        width: $1of5
+
+    .cols6upto640 > .grid__unit
+        width: $1of6
+
+    .cols7upto640 > .grid__unit
+        width: $1of7
+
+    .cols8upto640 > .grid__unit
+        width: $1of8
+
+
++bp(max768)
+    .cols1upto768 > .grid__unit
+        width: $1of1
+
+    .cols2upto768 > .grid__unit
+        width: $1of2
+
+    .cols3upto768 > .grid__unit
+        width: $1of3
+
+    .cols4upto768 > .grid__unit
+        width: $1of4
+
+    .cols5upto768 > .grid__unit
+        width: $1of5
+    // 16%
+    .cols6upto768 > .grid__unit
+        width: $1of6
+    // ??
+    .cols7upto768 > .grid__unit
+        width: $1of7
+
+    .cols8upto768 > .grid__unit
+        width: $1of8
+
+
++bp(max990)
+    .cols1upto990 > .grid__unit
+        width: $1of1
+
+    .cols2upto990 > .grid__unit
+        width: $1of2
+
+    .cols3upto990 > .grid__unit
+        width: $1of3
+
+    .cols4upto990 > .grid__unit
+        width: $1of4
+
+    .cols5upto990 > .grid__unit
+        width: $1of5
+    //Is this right?
+    .cols6upto990 > .grid__unit
+        width: $1of6
+
+    .cols7upto990 > .grid__unit
+        width: $1of7
+
+    .cols8upto990 > .grid__unit
+        width: $1of8
+
+
++bp(min990)
+    .cols1from990 > .grid__unit
+        width: $1of1
+
+    .cols2from990 > .grid__unit
+        width: $1of2
+
+    .cols3from990 > .grid__unit
+        width: $1of3
+
+    .cols4from990 > .grid__unit
+        width: $1of4
+
+    .cols5from990 > .grid__unit
+        width: $1of5
+
+    .cols6from990 > .grid__unit
+        width: $1of6
+
+    .cols7from990 > .grid__unit
+        width: $1of7
+
+    .cols8from990 > .grid__unit
+        width: $1of8

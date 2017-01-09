@@ -1,63 +1,56 @@
+@require '../../config/default'
 @require "../../mixins/breakpoints.styl";
 
-$1of1 = 100%
-$1of2 = 50%
-$1of3 = 33.3333333%
-$2of3 = 66.6666666%
-$1of4 = 25%
-$3of4 = 75%
-$1of5 = 20%
-$2of5 = 40%
-$3of5 = 60%
-$4of5 = 80%
-$1of6 = 16.6666666%
-$5of6 = 83.3333333%
-$1of7 = 14.2857142%
 
-// TODO: Find alternatives to overflow-hidden grid
+// TODO: Alternatives to overflow-hidden grid
+
 .grid, .line
     overflow: hidden
-    *overflow: visible
-    *zoom: 1
-        
-.unit      
-    float: left
 
-.size1of1 
+    &__unit
+        float: left
+
+
+/* Sizes that can be put straight onto units */
+
+.size1of1
     float: none
 
 .size1of2
     width: $1of2
-    
-.size1of3 
+
+.size1of3
     width: $1of3
-    
-.size2of3 
+
+.size2of3
     width: $2of3
-    
-.size1of4 
+
+.size1of4
     width: $1of4
-    
+
 .size3of4
     width: $3of4
-    
-.size1of5 
+
+.size1of5
     width: $1of5
-    
-.size2of5 
+
+.size2of5
     width: $2of5
-    
+
 .size3of5
     width: $3of5
-    
-.size4of5 
+
+.size4of5
     width: $4of5
 
-.size1of6 
+.size1of6
     width: $1of6
-    
-.size5of6 
+
+.size5of6
     width: $5of6
+
+
+/* Predefined responsive unit sizes (Collapses to 1 column below 768) */
 
 .r-size1of1,
 .r-size1of2,
@@ -71,261 +64,41 @@ $1of7 = 14.2857142%
 .r-size4of5,
 .r-size1of6,
 .r-size5of6
-    width: $1of1 
-
-/*
-.lastUnit {
-    float: none;
-    width: auto;
-    _position: relative;
-    _left: -3px;
-    _margin-right: -3px;
-}
-*/
-
-.r-cols1to2 > .unit,
-.r-cols1to3 > .unit,
-.r-cols1to4 > .unit 
     width: $1of1
-    
-.r-cols2to3 > .unit,
-.r-cols2to4 > .unit,
-.r-cols2to5 > .unit,
-.r-cols2to6 > .unit 
-    width: $1of2
-    
-.r-cols3to6 > .unit,
-.r-cols3to4 > .unit,
-.r-cols3to7 > .unit 
-    width: $1of3
-
-
-+bp(max480)
-    .r-cols2to6 > .unit:nth-child(2n + 1),
-    .r-cols2to5 > .unit:nth-child(2n + 1)
-        clear: both
-
-
-+bp(min480 max768)
-    .r-cols2to6 > .unit:nth-child(3n + 1),
-    .r-cols2to5 > .unit:nth-child(3n + 1), 
-    .r-cols1to4 > .unit:nth-child(2n + 1),
-    .r-cols1to3 > .unit:nth-child(2n + 1)
-        clear: both
-
-
-+bp(min480)
-    .r-cols1to3 > .unit,
-    .r-cols1to4 > .unit
-        width: $1of2
-
-    .r-cols2to5 > .unit,
-    .r-cols2to6 > .unit
-        width: $1of3
-
 
 +bp(min768)
-    .r-cols1to2 > .unit
-        width: $1of2
-        
-    .r-cols1to3 > .unit,
-    .r-cols2to3 > .unit
-        width: $1of3
-        
-    .r-cols1to4 > .unit,
-    .r-cols2to4 > .unit,
-    .r-cols3to4 > .unit
-        width: $1of4
-        
-    .r-cols2to5 > .unit
-        width: $1of5
-        
-    .r-cols2to6 > .unit
-        width: $1of6
-        
-    .r-cols3to7 > .unit 
-        width: $1of7
-
     .r-size1of1
         float: none
-        
+
     .r-size1of2
-        width: $1of2
+        width: 50%
 
-    .r-size1of3 
-        width: $1of3
-        
-    .r-size2of3 
-        width: $2of3
-        
-    .r-size1of4 
-        width: $1of4
-        
-    .r-size3of4 
-        width: $3of4
-        
-    .r-size1of5 
-        width: $1of5
- 
+    .r-size1of3
+        width: 33.33333%
+
+    .r-size2of3
+        width: 66.66666%
+
+    .r-size1of4
+        width: 25%
+
+    .r-size3of4
+        width: 75%
+
+    .r-size1of5
+        width: 20%
+
     .r-size2of5
-        width: $2of5
-        
-    .r-size3of5 
-        width: $3of5
- 
-    .r-size4of5 
-        width: $4of5
- 
-    .r-size1of6 
-        width: $1of6
- 
+        width: 40%
+
+    .r-size3of5
+        width: 60%
+
+    .r-size4of5
+        width: 80%
+
+    .r-size1of6
+        width: 16.6666666%
+
     .r-size5of6
-        width: $5of6
-
-    .r-cols1to2 > .unit:nth-child(2n + 1),
-    .r-cols1to3 > .unit:nth-child(3n + 1),
-    .r-cols2to3 > .unit:nth-child(3n + 1),
-    .r-cols1to4 > .unit:nth-child(4n + 1),
-    .r-cols2to4 > .unit:nth-child(4n + 1),
-    .r-cols3to4 > .unit:nth-child(4n + 1),
-    .r-cols2to5 > .unit:nth-child(5n + 1),
-    .r-cols2to6 > .unit:nth-child(6n + 1) 
-        clear: both
-
-
-+bp(max768)
-    .r-cols3to4 .unit:nth-child(3n + 1),
-    .r-cols2to4 .unit:nth-child(2n + 1),
-    .r-cols2to3 .unit:nth-child(2n + 1) 
-        clear: both
-
-
-+bp(min990)
-    .cols1from990 > .unit
-        width: $1of1
-        
-    .cols2from990 > .unit
-        width: $1of2
-        
-    .cols3from990 > .unit
-        width: $1of3
-        
-    .cols4from990 > .unit
-        width: $1of4
-        
-    .cols5from990 > .unit
-        width: $1of5
-        
-    .cols6from990 > .unit
-        width: $1of6
-        
-    .cols7from990 > .unit
-        width: $1of7
-        
-    .cols8from990 > .unit
-        width: $1of8
-
-
-+bp(max990)
-    .cols1upto990 > .unit 
-        width: $1of1
-        
-    .cols2upto990 > .unit
-        width: $1of2
-        
-    .cols3upto990 > .unit
-        width: $1of3
-        
-    .cols4upto990 > .unit
-        width: $1of4
-        
-    .cols5upto990 > .unit
-        width: $1of5
-    //Is this right?    
-    .cols6upto990 > .unit
-        width: $1of6
-        
-    .cols7upto990 > .unit
-        width: $1of7
-        
-    .cols8upto990 > .unit
-        width: $1of8
-        
-
-+bp(max768)
-    .cols1upto768 > .unit 
-        width: $1of1
-        
-    .cols2upto768 > .unit
-        width: $1of2
-        
-    .cols3upto768 > .unit
-        width: $1of3
-        
-    .cols4upto768 > .unit
-        width: $1of4
-        
-    .cols5upto768 > .unit
-        width: $1of5
-    // 16%    
-    .cols6upto768 > .unit
-        width: $1of6
-    // ??    
-    .cols7upto768 > .unit 
-        width: $1of7
-        
-    .cols8upto768 > .unit 
-        width: $1of8
-        
-
-+bp(max640)
-    .cols1upto640 > .unit
-        width: $1of1
-        
-    .cols2upto640 > .unit
-        width: $1of2
-        
-    .cols3upto640 > .unit
-        width: $1of3
-        
-    .cols4upto640 > .unit
-        width: $1of4
-        
-    .cols5upto640 > .unit
-        width: $1of5
-        
-    .cols6upto640 > .unit
-        width: $1of6
-        
-    .cols7upto640 > .unit
-        width: $1of7
-        
-    .cols8upto640 > .unit
-        width: $1of8
-
-
-+bp(max480)
-    .cols1upto480 > .unit
-        width: $1of1
-        
-    .cols2upto480 > .unit
-        width: $1of2
-        
-    .cols3upto480 > .unit
-        width: $1of3
-        
-    .cols4upto480 > .unit
-        width: $1of4
-        
-    .cols5upto480 > .unit
-        width: $1of5
-
-    .cols6upto480 > .unit
-        width: $1of6
-        
-    .cols7upto480 > .unit
-        width: $1of7
-        
-    .cols8upto480 > .unit
-        width: $1of8
-        
+        width: 83.3333333%

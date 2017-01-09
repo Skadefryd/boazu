@@ -1,12 +1,31 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
+<div class="mod">
+	<img src="http://placekitten.com/950/300" alt="testkatt" style="max-width:100%">
+</div>
 <h1>Something's strange in the neighbourhood</h1>
 <div class="mod">
 		<p>Methodologies bricks-and-clicks; ecologies disintermediate engineer visualize back-end; rich-clientAPIs e-services platforms visionary value. IntegrateAJAX-enabled synthesize engage efficient granular, "initiatives transparent out-of-the-box." Tag reintermediate bandwidth bricks-and-clicks seamless frictionless infrastructures extensible, world-class user-contributed. Next-generation repurpose revolutionize enterprise synthesize whiteboard eyeballs. User-centric, recontextualize--syndicate revolutionize schemas reinvent, disintermediate life-hacks architect granular customized, markets. </p>
 </div>
+<!-- -->
+<div class="grid r-cols1to2">
+	<div class="grid__unit">
+		<div class="mod">
+			<p>Semantic; create proactive enhance distributed aggregate wireless synergies granular viral unleash back-end dot-com plug-and-play sexy ROI paradigms aggregate cross-platform reinvent. Communities web-enabled impactful initiatives--technologies magnetic communities vortals syndicate user-contributed granular platforms models A-list beta-test. Tagclouds convergence bricks-and-clicks ROI podcasts. Scale networkeffects unleash web-enabled innovative technologies, transform envisioneer scalable action-items!</p>
+		</div>
+	</div>
+	<div class="grid__unit">
+		<div class="mod">
+			<p>Blogospheres web services robust long-tail expedite cultivate mesh design brand web services evolve. Sticky frictionless real-time value initiatives viral end-to-end virtual enhance, cross-platform e-services.</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- -->
 <div class="grid r-cols1to3">
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod">
 				<h1>ROI paradigms</h1>
 				<h2>ROI paradigms</h2>
@@ -16,13 +35,13 @@
 				<p>Semantic; create proactive enhance distributed aggregate wireless synergies granular viral unleash back-end dot-com plug-and-play sexy ROI paradigms aggregate cross-platform reinvent. Communities web-enabled impactful initiatives--technologies magnetic communities vortals syndicate user-contributed granular platforms models A-list beta-test. Tagclouds convergence bricks-and-clicks ROI podcasts. Scale networkeffects unleash web-enabled innovative technologies, transform envisioneer scalable action-items!</p>
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod">
 				<h2>Bricks-and-clicks</h2>
-				<p>Communities web-enabled impactful initiatives--technologies magnetic communities vortals syndicate user-contributed granular platforms models A-list beta-test. Tagclouds convergence bricks-and-clicks ROI podcasts. Scale networkeffects unleash web-enabled innovative technologies, transform envisioneer scalable action-items!</p>
+				<img src="http://placekitten.com/480/700" alt="testkatt" style="max-width:100%">
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod">
 			<div class="media media--reverse">
 				<div class="media__img">
@@ -35,35 +54,35 @@
 			</div>
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod mod--skin mod--banana mod--is-clickable">
 				<h2>Engage content</h2>
 				<p>Engage content functionalities mindshare systems, infomediaries distributed enable mesh synergistic podcasting communities granular granular functionalities." Integrate architectures facilitate cutting-edge repurpose, feeds aggregate folksonomies, e-tailers open-source tag reintermediate streamline, syndicate metrics disintermediate e-enable synthesize metrics.</p>
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod mod--is-clickable">
 				<h2>Clicks-and-mortar</h2>
 				<p>ROI platforms back-end deploy; users, open-source; viral e-services benchmark. Viral synergies initiatives models world-class: users addelivery web services models tagclouds partnerships 24/7, open-source sticky real-time. Metrics schemas implement; portals beta-test; e-business dynamic plug-and-play clicks-and-mortar, "infomediaries seamless," disintermediate engineer aggregate interfaces evolve blogging infomediaries schemas communities productize out-of-the-box.</p>
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod mod--skin mod--green mod--is-clickable">
 				<h2>Disintermediate life-hacks</h2>
 				<p>Methodologies bricks-and-clicks; ecologies disintermediate engineer visualize back-end; rich-clientAPIs e-services platforms visionary value. IntegrateAJAX-enabled synthesize engage efficient granular, "initiatives transparent out-of-the-box." Tag reintermediate bandwidth bricks-and-clicks seamless frictionless infrastructures extensible, world-class user-contributed. Next-generation repurpose revolutionize enterprise synthesize whiteboard eyeballs. User-centric, recontextualize--syndicate revolutionize schemas reinvent, disintermediate life-hacks architect granular customized, markets. </p>
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod">
 				<p>Semantic; create proactive enhance distributed aggregate wireless synergies granular viral unleash back-end dot-com plug-and-play sexy ROI paradigms aggregate cross-platform reinvent. Communities web-enabled impactful initiatives--technologies magnetic communities vortals syndicate user-contributed granular platforms models A-list beta-test. Tagclouds convergence bricks-and-clicks ROI podcasts. Scale networkeffects unleash web-enabled innovative technologies, transform envisioneer scalable action-items!</p>
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod">
 				<p>Semantic; create proactive enhance distributed aggregate wireless synergies granular viral unleash back-end dot-com plug-and-play sexy ROI paradigms aggregate cross-platform reinvent. Communities web-enabled impactful initiatives--technologies magnetic communities vortals syndicate user-contributed granular platforms models A-list beta-test. Tagclouds convergence bricks-and-clicks ROI podcasts. Scale networkeffects unleash web-enabled innovative technologies, transform envisioneer scalable action-items!</p>
 		</div>
 	</div>
-	<div class="unit">
+	<div class="grid__unit">
 		<div class="mod">
 				<p>Blogospheres web services robust long-tail expedite cultivate mesh design brand web services evolve. Sticky frictionless real-time value initiatives viral end-to-end virtual enhance, cross-platform e-services.</p>
 		</div>

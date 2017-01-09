@@ -1,73 +1,71 @@
 @require "../../mixins/breakpoints";
 
-.flex
-    display: flex
-    min-width: 0  
-
 .inline-flex
     display: inline-flex
-    
+
 .flex
-    &--wrap 
+    display: flex
+
+    &--wrap
         flex-wrap: wrap
-        
-    &--nowrap 
+
+    &--nowrap
         flex-wrap: nowrap
-        
-    &--wrap-reverse 
+
+    &--wrap-reverse
         flex-wrap: wrap-reverse
-        
+
     &--row
         flex-direction: row
-        
+
     &--row-reverse
         flex-direction: row-reverse
-        
+
     &--column
         flex-direction: column
-        
+
     &--column-reverse
         flex-direction: column-reverse
-        
+
     &--justify-start
         justify-content: flex-start
-        
+
     &--justify-end
         justify-content: flex-end
 
     &--Justify-center
         justify-content: center
-        
+
     &--justify-space-between
         justify-content: space-between
-        
+
     &--justify-space-around
         justify-content: space-around
-        
+
     &--align-items-start
         align-items: flex-start
-        
+
     &--align-items-end
         align-items: flex-end
-        
+
     &--align-items-center
         align-items: center
 
     &--align-items-baseline
         align-items: baseline
-        
+
     &--align-items-stretch
         align-items: stretch
-        
-    &--align-content-start 
+
+    &--align-content-start
         align-content: flex-start
-        
+
     &--align-content-end
         align-content: flex-end
-        
+
     &--align-content-center
         align-content: center
-        
+
     &--align-content-space-between
         align-content: space-between
 
@@ -79,54 +77,58 @@
 
 .flex > .align-self-start
     align-self: flex-start
-    
+
 .flex > .align-self-end
     align-self: flex-end
-    
+
 .flex > .align-self-center
     align-self: center
-    
+
 .flex > .align-self-baseline
     align-self: baseline
-    
+
 .flex > .align-self-stretch
     align-self: stretch
 
-.flex-grow1 
+.flex > .flex__child
+    min-width: 0
+
+.flex-grow1
     flex-grow: 1
-    
-.flex-grow2 
+
+.flex-grow2
     flex-grow: 2
-    
+
 .flex-grow3
     flex-grow: 3
-    
+
 .flex-grow4
     flex-grow: 4
-    
+
 .flex-grow5
     flex-grow: 5
-    
+
 .flex-grow6
     flex-grow: 6
-    
+
 .flex-grow7
     flex-grow: 7
-    
+
 .flex-grow8
     flex-grow: 8
-    
+
 .flex-grow9
     flex-grow: 9
-    
+
 .flex-grow10
     flex-grow: 10
-    
+
 .flex-no-shrink
     flex-shrink: 0
-    
+
 // mod with flex behaviour
-.flex.mod,
-.flex.mod > .inner { width: 100%; }
-a.mod.flex 
+.flex.mod
+    width: 100%
+
+a.mod.flex
     display: flex !important

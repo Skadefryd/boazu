@@ -1,7 +1,34 @@
+/*
+
+
+    #Media
+
+    Typically positions 2 elements next to eachothers
+    where one takes the 'rest' of the available space.
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    Markup example:
+
+    <div class="media">
+      <div class="media__img"> ... </div>
+      <div class="media__body"> ... </div>
+    </div>
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    .media.media--reverse     swaps body/img position
+    .media.media--top         top aligns body/img
+    .media.media--bottom      bottom aligns body/img
+
+    - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*/
+
 .media
   display: table
   width: 100%
-  
+
   &__img,
   &__body
     display: table-cell
@@ -12,7 +39,7 @@
     paddin-right:16px
     > img
       max-width: none
-  
+
   &__body
     width: auto
     & > :last-child
@@ -37,5 +64,5 @@
 .media--bottom
   > .media__img,
   > .media__body
-    vertical-align: bottom  
+    vertical-align: bottom
 

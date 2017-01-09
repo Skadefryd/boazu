@@ -1,0 +1,100 @@
+@require '../../config/default'
+@require "../../mixins/breakpoints.styl";
+
+/*
+
+
+        # r-cols{f}to{t}
+
+        Grid system for dynamic content. This allows any amount of units
+        to be spread dynamicly on line(s), from {f} on each line on mobile
+        to {t} on each line on larger screens
+
+        {f}
+        1, 2, 3
+
+        {t}
+		2, 3, 4, 5, 6, 7
+
+
+
+*/
+
+.r-cols1to2 > .grid__unit,
+.r-cols1to3 > .grid__unit,
+.r-cols1to4 > .grid__unit
+    width: $1of1
+
+.r-cols2to3 > .grid__unit,
+.r-cols2to4 > .grid__unit,
+.r-cols2to5 > .grid__unit,
+.r-cols2to6 > .grid__unit
+    width: $1of2
+
+.r-cols3to6 > .grid__unit,
+.r-cols3to4 > .grid__unit,
+.r-cols3to7 > .grid__unit
+    width: $1of3
+
++bp(max480)
+    .r-cols2to6 > .grid__unit:nth-child(2n + 1),
+    .r-cols2to5 > .grid__unit:nth-child(2n + 1)
+        clear: both
+
+
++bp(min480 max768)
+    .r-cols2to6 > .grid__unit:nth-child(3n + 1),
+    .r-cols2to5 > .grid__unit:nth-child(3n + 1),
+    .r-cols1to4 > .grid__unit:nth-child(2n + 1),
+    .r-cols1to3 > .grid__unit:nth-child(2n + 1)
+        clear: both
+
+
++bp(min480)
+    .r-cols1to3 > .grid__unit,
+    .r-cols1to4 > .grid__unit
+        width: $1of2
+
+    .r-cols2to5 > .grid__unit,
+    .r-cols2to6 > .grid__unit
+        width: $1of3
+
+
++bp(min768)
+    .r-cols1to2 > .grid__unit
+        width: $1of2
+
+    .r-cols1to3 > .grid__unit,
+    .r-cols2to3 > .grid__unit
+        width: $1of3
+
+    .r-cols1to4 > .grid__unit,
+    .r-cols2to4 > .grid__unit,
+    .r-cols3to4 > .grid__unit
+        width: $1of4
+
+    .r-cols2to5 > .grid__unit
+        width: $1of5
+
+    .r-cols2to6 > .grid__unit
+        width: $1of6
+
+    .r-cols3to7 > .grid__unit
+        width: $1of7
+
+    .r-cols1to2 > .grid__unit:nth-child(2n + 1),
+    .r-cols1to3 > .grid__unit:nth-child(3n + 1),
+    .r-cols2to3 > .grid__unit:nth-child(3n + 1),
+    .r-cols1to4 > .grid__unit:nth-child(4n + 1),
+    .r-cols2to4 > .grid__unit:nth-child(4n + 1),
+    .r-cols3to4 > .grid__unit:nth-child(4n + 1),
+    .r-cols2to5 > .grid__unit:nth-child(5n + 1),
+    .r-cols2to6 > .grid__unit:nth-child(6n + 1)
+        clear: both
+
+
++bp(max768)
+    .r-cols3to4 > .grid__unit:nth-child(3n + 1),
+    .r-cols2to4 > .grid__unit:nth-child(2n + 1),
+    .r-cols2to3 > .grid__unit:nth-child(2n + 1)
+        clear: both
