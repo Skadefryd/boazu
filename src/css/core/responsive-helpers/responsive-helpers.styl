@@ -4,47 +4,51 @@
 
         Responsive helper classes
 
+        Should prob. be generated from the defined breakpoints (?)
+
 
 */
-.leftify-lt768 
+.leftify-lt768
     text-align: left !important
-        
-.rightify-lt768 
+
+.rightify-lt768
     text-align: right !important
-    
-.centerify-lt768 
+
+.centerify-lt768
     text-align: center !important
-    
-.fleft-lt768 
+
+.fleft-lt768
     float: left !important
-    
-.fright-lt768 
+
+.fright-lt768
     float: right !important
-    
+
 .hide-lt768,
-.show-gt768 
+.show-gt768
     display: none !important
 
 +bp(min768)
-    .leftify-ht768 
+    .leftify-gt768
         text-align: left !important
-        
-    .rightify-ht768
+
+    .rightify-gt768
         text-align: right !important
-        
-    .centerify-ht768 
+
+    .centerify-gt768
         text-align: center !important
-        
-    .fleft-ht768 
+
+    .fleft-gt768
         float: left !important
-        
-    .fright-ht768 
+
+    .fright-gt768
         float: right !important
-        
-    .hide-ht768,
+
     .hide-gt768,
-    .show-lt768 
+    .show-lt768
         display: none !important
+
+    .show-gt768
+        display: initial
 
 +bp(max480)
     .show-gt480,
@@ -52,45 +56,29 @@
         display: none !important
 
 +bp(max640)
-    .show-gt-640,
-    .hidelt640,
     .hide-lt640
         display: none !important
 
 +bp(max900)
-    .show-gt-900,
-    .hidelt900,
     .hide-lt900
         display: none !important
 
 +bp(max1235)
-    .show-gt-1235,
-    .hidelt1235,
     .hide-lt1235
         display: none !important
 
 +bp(min480)
-    .show-lt-480,
-    .hidegt480,
-    .hide-gt480,
-    .hide-ht480
+    .hide-gt480
         display: none !important
 
 +bp(min640)
-    .show-lt-640,
-    .hidegt640,
-    .hide-gt640,
-    .hide-ht640 
+    .hide-gt640
         display: none !important
 
 +bp(min900)
-    .hidegt900,
-    .hide-gt900,
-    .hide-ht900
+    .hide-gt900
         display: none !important
 
 +bp(min1235)
-    .hidegt1235,
-    .hide-gt1235,
-    .hide-ht1235 
+    .hide-gt1235
         display: none !important

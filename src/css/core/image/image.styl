@@ -1,0 +1,91 @@
+/*
+
+
+		Image format tools, cropping, centering in a div, etc
+
+
+
+		<div class="img-format img-format--ratio16by9 img-format--ratio4by3-lt768">
+			<img class="img-format__centered" src="..." alt="...">
+		</div>
+
+
+
+
+*/
+
+// Ratio constants
+
+$ratio1by1 = 100%
+$ratio4by3 = 75%
+$ratio3by2 = 66.6666%
+$ratio16by9 = 56.25%
+$ratio2by1 = 50%
+$ratio3by4 = 133.3333%
+
+img
+    max-width: 100%
+
+
+// responsive image formats
+.img-format
+    overflow: hidden
+    position: relative
+    transform-style: preserve-3d
+
+    &--ratio1by1
+        padding-top: $ratio1by1
+
+    &--ratio4by3,
+    &--ratio-normal
+        padding-top: $ratio4by3
+
+    &--ratio3by2
+        padding-top: $ratio3by2
+
+    &--ratio16by9,
+    &--ratio-widescreen
+        padding-top: $ratio16by9
+
+    &--ratio2by1
+        padding-top: $ratio2by1
+
+    &--ratio3by4
+        padding-top: $ratio3by4
+
+    &--rounded
+       border-radius: 50%
+
+    &__centered
+        position: absolute
+        left: 50%
+        top: 50%
+        max-width: 100%
+        max-height: 100%
+        transform: translate(-50%,-50%)
+
+    &__crop-vertical
+        width: 100%
+        height: auto
+        max-height: none
+
+    &__crop-horizontal
+        height: 100%
+        width: auto
+        max-width: none
+
+bp(max768)
+    .img-format
+        &--ratio1by1-lt768
+            padding-top: $ratio1by1
+        &--ratio4by3-lt768
+            padding-top: $ratio4by3
+        &--ratio3by2-lt768
+            padding-top: $ratio3by2
+        &--ratio16by9-lt768
+            padding-top: $ratio16by9
+        &--ratio2by1-lt768
+            padding-top: $ratio2by1
+        &--ratio3by4-lt768
+            padding-top: $ratio3by4
+

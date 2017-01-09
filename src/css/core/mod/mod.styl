@@ -71,7 +71,7 @@ $large-screen-padding = 16px
     outline-offset: -2px;
   &--skin
     padding: $small-screen-padding
-    
+
   // skins
   &--green
     background-color: $mint
@@ -83,6 +83,11 @@ $large-screen-padding = 16px
     &:focus,
     &:hover
       outline-color: $banana
+  &--ice
+    background-color: $ice
+    &:focus,
+    &:hover
+      outline-color: $toothpaste
 
 +bp(min480)
   .mod
@@ -92,7 +97,7 @@ $large-screen-padding = 16px
       margin: 16px
       padding: $large-screen-padding
 
-    
+
 // Overides
 .mod h1, .mod h2, .mod h3, .mod h4, .mod h5, .mod h6,
 .mod ul, .mod ol,

@@ -1,0 +1,207 @@
+
+
+//	Positioning helpers
+
+
+.text-right
+	text-align: right
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.valign-top
+	vertical-align: top
+
+.valign-middle
+	vertical-align: middle
+
+.valign-bottom
+	vertical-align: bottom
+
+.relative
+	position: relative
+
+.absolute
+	position: absolute
+
+.fixed
+	position: fixed
+
+.p-top
+	top: 0
+
+.p-bottom
+	bottom: 0
+
+.p-right
+	right: 0
+
+.p-left
+	left: 0
+
+.float-right
+	float: right
+
+.float-left
+	float: left
+
+
+
+
+//  Display hlepers
+
+
+.display-block
+	display: block
+
+.display-inline
+	display: inline
+
+.display-inline-block
+	display: inline-block
+
+.display-table
+	display: table
+    width: 100%
+    table-layout: fixed
+
+.display-cell
+    display: table-cell
+    vertical-align: middle
+
+.print-only
+	display: none
+
+
+
+
+// Hide helpers
+
+
+.invisible
+	visibility: hidden
+
+.hidden
+	display: none !important
+
+// From h5bp
+.visuallyhidden
+    border: 0
+    clip: rect(0 0 0 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
+    white-space: nowrap
+
+.screen-reader-only
+    position:absolute
+    left:-10000px
+    top:auto
+    width:1px
+    height:1px
+    overflow:hidden
+
+
+
+// Sizeing helpers
+
+
+.fit-height
+	height: 100%
+
+.width-auto
+	width: auto
+
+.overflow
+	overflow: visible
+
+.overflow-hidden
+	overflow: hidden
+
+
+
+// Text helpers
+
+
+.word-break
+	word-wrap: break-word
+
+.no-break
+	white-space: nowrap
+
+.truncate,
+.ellipsify
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+.truncate-fade-2-lines
+    position: relative
+    height: 3em
+    line-height: 1.5em
+    overflow: hidden
+
+.truncate-fade-2-lines:after
+    content: ''
+    text-align: right
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 50%
+    height: 1.5em
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%)
+
+
+
+// Opacity helpers
+
+
+.opacity25
+	opacity: 0.25
+
+.opacity50
+	opacity: 0.5
+
+.opacity60
+	opacity: 0.6
+
+.opacity75
+	opacity: 0.75
+
+
+
+// User interaction helpers
+
+
+.select-all
+	user-select: all
+
+.show-cursor
+	cursor: pointer
+
+.non-selectable
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+    -webkit-touch-callout: none
+    user-select: none
+
+
+
+// clearfixes
+
+
+.cb
+	clear: both
+
+.cf:before,
+.cf:after
+	content: " "
+	display: table
+
+.cf:after
+	clear: both
