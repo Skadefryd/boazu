@@ -1,7 +1,8 @@
 @require '../config/default.styl'
 @require '../mixins/*.styl'
-
+// normalize would go here
 @require 'global'
+
 @require 'typography/'
 @require 'helpers'
 @require 'colors/'
@@ -10,9 +11,11 @@
 @require 'grid/grid.styl' // wildcard not working for some reason (should probably get all .styl in a folder)
 @require 'grid/r-cols.styl'
 @require 'grid/colsnfrom.styl'
-
 @require 'flex/'
 @require 'col-count/'
+
+@require 'form/button.styl'
+@require 'form/input.styl'
 @require 'responsive-helpers/'
 @require 'mod/'
 @require 'mod/debug.styl'

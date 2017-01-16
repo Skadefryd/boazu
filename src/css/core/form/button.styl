@@ -1,0 +1,101 @@
+@import '../../config/default'
+@import '../../mixins/*'
+/*
+
+
+        Generic button
+
+
+*/
+input[type=button],
+input[type=submit],
+input[type=reset],
+button,
+.icon,
+.button,
+.g-button,
+a.g-button
+    display: inline-block
+    cursor: pointer
+    appearance: none
+    height: auto
+    outline: none
+    line-height: 1.25em
+    font-size: 16px  // 16px+ avoids zooming on iOS
+
+.g-button
+    border: 1px solid
+    padding: 10px 12px
+    color: $primary-blue
+    border-color: $secondary-blue
+    border-radius: 2px
+    background: $milk
+    text-decoration: none
+
+    &:hover,
+        background: $ice
+        text-decoration: none
+
+    &:active
+        background: $ice
+        text-decoration: none
+
+    &:focus
+        outline:2px solid $primary-blue
+        outline-offset:-2px;
+        background-image: none
+        text-decoration: none
+
+    &--primary
+        border: 1px solid $primary-blue
+        background: $primary-blue
+        color: $milk
+        &:hover
+            background: #004fc8
+            background-image: none
+
+        &:active
+            background: #2f81ff
+            border-color: #2f81ff
+
+        &:focus
+            border-color: #2f81ff
+
+    &--order
+        border: 1px solid $watermelon
+        background: $watermelon
+        color: $milk
+
+        &:not([disabled]):hover
+            background: $cherry
+
+        &:not([disabled]):active
+            background: #ff8576
+            border-color: #ff8576
+
+    &:disabled,
+    &.disabled
+        border: 1px solid #f1f4f6 !important
+        background: #f1f4f6 !important
+        color: $stone !important
+        background-image: none !important
+        cursor: default !important
+        &:hover,
+        &:active,
+        &:focus
+            outline: none;
+
+
+.in-progress
+    background-size: 30px 30px !important
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, .05) 25%, transparent 25%,
+    transparent 50%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, .05) 75%,
+    transparent 75%, transparent) !important
+    animation: animate-inprogress 3s linear infinite
+
+@keyframes animate-inprogress
+    0%
+        background-position: 0 0
+
+    100%
+        background-position: 60px 0

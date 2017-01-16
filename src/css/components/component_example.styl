@@ -1,0 +1,25 @@
+@Require 'settings'    		// Global Constants and variables
+@Require 'globaltheme_a'	// Global theme_a if you wanna
+@Require 'tools'    		// Mixins, functions, ...
+
+/*
+
+		Some Example Component
+
+*/
+
+
+// Map local component-specific variables to global theme
+$my-component-background-color = $banana
+
+
+
+// Override with component theme if you want to
+// @Require 'component-theme'
+// $my-component-background-color = '#123456'
+
+
+
+// Component specific css
+.my-component
+	Background-color: $my-component-background-color

@@ -44,15 +44,23 @@
 					<img height="73" width="73" class="img-format--rounded" src="https://pages.github.schibsted.io/finn/spaden/dist/img/dummies/shovelface.jpg" alt="Bilde av selger"/>
 				</div>
 				<div class="media__body">
-					<h5>Morten Spadefjes</h5>
+					<p>Morten Spadefjes</p>
 					<p>[Stjernerating] <span class="d1">(16 vurderinger)</span></p>
 
 				</div>
 			</div>
 		</div>
 		<p>
-			<button class="primary">Send melding</button>
-			<button class="primary">Betal trygt</button>
+			<button class="g-button">g-button</button>
+			<button class="g-button g-button--primary">Primary</button>
+			<button class="g-button g-button--order">order</button>
+			<button class="g-button g-button--order disabled">order disabled</button>
+		</p>
+		<p>
+			<a href="#" class="g-button">g-button</a>
+			<a href="#" class="g-button g-button--primary">Primary</a>
+			<a href="#" class="g-button g-button--order">order</a>
+			<a href="#" class="g-button g-button--order disabled">order disabled</a>
 		</p>
 	</div>
 	<div class="grid__unit r-size1of6"></div>
